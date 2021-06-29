@@ -69,7 +69,7 @@ async function main() {
 
     // run test
     step('\nRunning test...');
-    await run('yarn', ['build']);
+    // await run('yarn', ['build']);
 
     // update vesion
     step('\nUpdating version...');
