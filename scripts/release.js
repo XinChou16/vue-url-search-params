@@ -89,8 +89,8 @@ async function main() {
 
     // push to github
     step('\nPushing to github...');
-    await run('git', ['tag', `v`]);
-    await run('git', ['push', 'origin', `refs/tags/v`]);
+    await run('git', ['tag', `v${targetVersion}`]);
+    await run('git', ['push', 'origin', `refs/tags/v${targetVersion}`]);
     await run('git', ['push']);
 
     step('\nFinished');
