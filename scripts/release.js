@@ -32,7 +32,7 @@ async function main() {
         message: 'Select release Type',
         choices: versionIncrements.map(i => `${i} (${inc(i)})`).concat(['custom'])
     });
-    
+
     if (release === 'custom') {
         targetVersion = (await prompt({
             type: 'input',
@@ -77,21 +77,21 @@ async function main() {
 
     // commit change
     step('\nCommitting changes...');
-    // await run('git', ['add', '-A']);
-    // await run('git', ['commit', '-m', `release: v${targetVersion}`]);
+    await run('git', ['add', '-A']);
+    await run('git', ['commit', '-m', `release: v${targetVersion}`]);
 
     // Publish the package.
     step('\nPublishing the package...')
-    // await run ('yarn', [
-    //   'publish', '--tag', tag, '--new-version', targetVersion, '--no-commit-hooks',
-    //   '--no-git-tag-version'
-    // ])
+    await run ('yarn', [
+      'publish', '--tag', tag, '--new-version', targetVersion, '--no-commit-hooks',
+      '--no-git-tag-version'
+    ])
 
     // push to github
     step('\nPushing to github...');
-    // await run('git', ['tag', `v`]);
-    // await run('git', ['push', 'origin', `refs/tags/v`]);
-    // await run('git', ['push']);
+    await run('git', ['tag', `v`]);
+    await run('git', ['push', 'origin', `refs/tags/v`]);
+    await run('git', ['push']);
 
     step('\nFinished');
     step(`\n👏🏻👏🏻Congratulation, success release version "${targetVersion}" with the "${tag}" tag.`);

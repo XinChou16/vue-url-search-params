@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "rollup -c",
+    "release": "node scripts/release.js",
     "format": "prettier --write --parser=typescript 'src/*.ts'"
   },
   "keywords": [
@@ -13,8 +14,8 @@
     "query"
   ],
   "files": [
-      "dist/index.d.ts",
-      "dist/*.js"
+    "dist/index.d.ts",
+    "dist/*.js"
   ],
   "author": "Xin Zhou",
   "license": "MIT",
