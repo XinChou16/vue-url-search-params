@@ -1,6 +1,6 @@
 {
   "name": "vue-url-search-params",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Get url search params easily.",
   "main": "dist/vue-url-search-params.umd.js",
   "browser": "dist/vue-url-search-params.esm-browser.js",
@@ -22,14 +22,14 @@
     "dist/*.js"
   ],
   "repository": {
-      "type": "git",
-      "url": "git+https://github.com/XinChou16/vue-url-search-params.git"
+    "type": "git",
+    "url": "git+https://github.com/XinChou16/vue-url-search-params.git"
   },
   "author": "Xin Zhou",
   "license": "MIT",
   "homepage": "https://github.com/XinChou16/vue-url-search-params",
   "peerDependencies": {
-      "vue": "^2.6.14"
+    "vue": "^2.6.14"
   },
   "engines": {
     "node": ">= 8"
